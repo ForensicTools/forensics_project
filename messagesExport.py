@@ -8,8 +8,7 @@ from shutil import copyfile
 import exifread
 import exifread as ef
 
-###BE EXTREMELY CAREFUL THIS WILL GENERATE ALOT OF DATA BASED ON THE SIZE OF YOUR IPHONE BACK UP
-###
+###BE EXTREMELY CAREFUL THIS WILL GENERATE ALOT OF DATA BASED ON THE SIZE OF YOUR IPHONE BACK UP###
 
 
 def convertCocoa(value):
@@ -223,7 +222,7 @@ def setup(pathToBackup):
 
 
 
-
+##running this program will generate a lot of data be very careful before running
 
 def main():
     file_path = "C:\\Users\\Peter\\Desktop\\images"
@@ -231,8 +230,8 @@ def main():
     file_path = "C:\\Users\\Peter\\Desktop\\files"
     pathlib.Path(file_path).mkdir(parents=True, exist_ok=True)
 
-    getIndividualChats("D:\\cc9e2052aae826987a63f0cd60e81369774adeb4")
-    getChatGroupMessages("D:\\cc9e2052aae826987a63f0cd60e81369774adeb4")
+    #getIndividualChats("D:\\cc9e2052aae826987a63f0cd60e81369774adeb4")
+    #getChatGroupMessages("D:\\cc9e2052aae826987a63f0cd60e81369774adeb4")
 
 
 main()
