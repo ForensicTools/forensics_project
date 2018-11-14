@@ -8,6 +8,9 @@ from shutil import copyfile
 import exifread
 import exifread as ef
 
+###BE EXTREMELY CAREFUL THIS WILL GENERATE ALOT OF DATA BASED ON THE SIZE OF YOUR IPHONE BACK UP
+###
+
 
 def convertCocoa(value):
     unix = datetime(1970, 1, 1)  # UTC
