@@ -5,6 +5,7 @@ import hashlib
 import pathlib
 from pathlib import Path
 from shutil import copyfile
+import os
 import exifread
 import exifread as ef
 
@@ -18,14 +19,15 @@ def convertCocoa(value):
     timestamp = datetime.fromtimestamp(int((value/1000000000))) + delta
     return timestamp.strftime('%Y-%m-%d %H:%M:%S')
 
-def databaseConnection():
-    conn = sqlite3.connect('3d0d7e5fb2ce288813306e4d4636395e047a3d28.db')
+def databaseConnection(pathToBackup):
+    filepath = os.path.dirname(pathToBackup) + "iBackupData\\DBFiles\\3d0d7e5fb2ce288813306e4d4636395e047a3d28.db"
+    conn = sqlite3.connect(filepath)
     c = conn.cursor()
     return c
 
-def getHandleIds():
+def getHandleIds(pathToBackup):
     handleIds = []
-    c = databaseConnection()
+    c = databaseConnection(pathToBackup)
     rows = c.execute("SELECT ROWID FROM handle")
     for row in rows:
         handleIds += [row[0]]
@@ -33,38 +35,38 @@ def getHandleIds():
     return handleIds
 
 
-def getAttachmentROWIDs():
+def getAttachmentROWIDs(pathToBackup):
     attachmentIds = []
-    c = databaseConnection()
+    c = databaseConnection(pathToBackup)
     rows = c.execute("SELECT ROWID FROM attachment")
     for row in rows:
         attachmentIds += [row[0]]
     c.close()
     return attachmentIds
 
-def getGroupChatIDs():
+def getGroupChatIDs(pathToBackup):
     groupChatIDs = []
-    c = databaseConnection()
+    c = databaseConnection(pathToBackup)
     rows = c.execute("SELECT room_name FROM chat")
     for row in rows:
         if row[0] not in groupChatIDs and row[0] is not None:
             groupChatIDs += [row[0]]
     return groupChatIDs
 
-def createDirectories(handles):
+def createDirectories(pathToBackup, handles):
     for handle in handles:
-        file_path_handle = "C:\\Users\\Peter\\Desktop\\images\\" + str(handle)
+        file_path_handle = os.path.dirname(pathToBackup) + "\\iBackupData\\SMS\\Attachments\\" + str(handle)
         pathlib.Path(file_path_handle).mkdir(parents=True, exist_ok=True)
 
 
 
 
 def getChatGroupMessages(pathToBackup):
-    GCIds = getGroupChatIDs()
-    check = createDirectories(GCIds)
+    GCIds = getGroupChatIDs(pathToBackup)
+    createDirectories(pathToBackup, GCIds)
     for i in range(len(GCIds)):
-        filename = "C:\\Users\\Peter\\Desktop\\files\\" + str(GCIds[i]) + ".txt"
-        c = databaseConnection()
+        filename = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Texts\\" + str(GCIds[i]) + ".txt"
+        c = databaseConnection(pathToBackup)
         rows = c.execute("SELECT handle_id, ROWID, text, service, date, is_from_me, cache_has_attachments FROM message WHERE cache_roomnames=" + "\"" + str(GCIds[i]) + "\"")
         file = open(filename, "w+")
         arrayOfJSON = []
@@ -76,13 +78,13 @@ def getChatGroupMessages(pathToBackup):
                     "ROWID": str(row[1]),
                     "text": str(row[2]),
                     "service": str(row[3]),
-                    "date": str(row[4]),
+                    "date": convertCocoa(row[4]),
                     "is_from_me": str(row[5]),
                     "cache_has_attachments": str(row[6])
                 }
 
                 if row[6] == 1:
-                    c = databaseConnection()
+                    c = databaseConnection(pathToBackup)
                     otherRows = c.execute(
                         "SELECT attachment.filename, attachment.mime_type, attachment.is_outgoing, attachment.transfer_name FROM attachment "
                         "INNER JOIN message_attachment_join ON attachment.ROWID=message_attachment_join.attachment_id "
@@ -113,7 +115,7 @@ def getChatGroupMessages(pathToBackup):
 
 
                         source = pathToBackup + "\\" + prefix + "\\" + hash
-                        destination = "C:\\Users\\Peter\\Desktop\\images\\" + str(GCIds[i]) + "\\" + hash
+                        destination = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Attachments\\" + str(GCIds[i]) + "\\" + hash
                         myFile = Path(source)
                         if myFile.is_file():
                             copyfile(source, destination + extension)
@@ -137,11 +139,11 @@ def closeFile(file):
     file.close()
 
 def getIndividualChats(pathToBackup):
-    ids = getHandleIds()
-    createDirectories(ids)
+    ids = getHandleIds(pathToBackup)
+    createDirectories(pathToBackup, ids)
     for i in range(len(ids)):
-        filename = "C:\\Users\\Peter\\Desktop\\files\\" + str(ids[i]) + ".txt"
-        c = databaseConnection()
+        filename = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Texts\\" + str(ids[i]) + ".txt"
+        c = databaseConnection(pathToBackup)
         rows = c.execute("SELECT handle_id, ROWID, text, service, date, is_from_me, cache_has_attachments FROM message WHERE cache_roomnames IS NULL AND handle_id=" + str(ids[i]))
         file = open(filename, "w+")
         arrayOfJSON = []
@@ -152,14 +154,14 @@ def getIndividualChats(pathToBackup):
                         "ROWID": str(row[1]),
                         "text": str(row[2]),
                         "service": str(row[3]),
-                        "date": str(row[4]),
+                        "date": convertCocoa(row[4]),
                         "is_from_me": str(row[5]),
                         "cache_has_attachments": str(row[6])
                     }
 
 
                     if row[6] == 1:
-                        c = databaseConnection()
+                        c = databaseConnection(pathToBackup)
                         otherRows = c.execute("SELECT attachment.filename, attachment.mime_type, attachment.is_outgoing, attachment.transfer_name FROM attachment "
                                         "INNER JOIN message_attachment_join ON attachment.ROWID=message_attachment_join.attachment_id "
                                         "INNER JOIN message ON message_attachment_join.message_id=message.ROWID "
@@ -190,7 +192,7 @@ def getIndividualChats(pathToBackup):
 
 
                             source = pathToBackup + "\\" + prefix + "\\" + hash
-                            destination = "C:\\Users\\Peter\\Desktop\\images\\" + str(row[0]) + "\\" + hash
+                            destination = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Attachments\\" + str(row[0]) + "\\" + hash
                             myFile = Path(source)
                             if myFile.is_file():
                                 copyfile(source, destination + extension)
@@ -205,18 +207,7 @@ def getIndividualChats(pathToBackup):
         file.close()
 
 
-def setup(pathToBackup):
-    file_path_main = "C:\\Users\\Peter\\Documents\\iBackupData"
-    pathlib.Path(file_path_main).mkdir(parents=True, exist_ok=True)
 
-    file_path_dbFiles = "C:\\Users\\Peter\\Documents\\iBackupData\\DBFiles"
-    pathlib.Path(file_path_dbFiles).mkdir(parents=True, exist_ok=True)
-
-    source = pathToBackup + "\\Manifest.db"
-    copyfile(source, file_path_dbFiles)
-
-    source = pathToBackup + "\\3d0d7e5fb2ce288813306e4d4636395e047a3d28"
-    copyfile(source, file_path_dbFiles)
 
 
 
@@ -225,13 +216,8 @@ def setup(pathToBackup):
 ##running this program will generate a lot of data be very careful before running
 
 def main():
-    file_path = "C:\\Users\\Peter\\Desktop\\images"
-    pathlib.Path(file_path).mkdir(parents=True, exist_ok=True)
-    file_path = "C:\\Users\\Peter\\Desktop\\files"
-    pathlib.Path(file_path).mkdir(parents=True, exist_ok=True)
-
-    #getIndividualChats("D:\\cc9e2052aae826987a63f0cd60e81369774adeb4")
-    #getChatGroupMessages("D:\\cc9e2052aae826987a63f0cd60e81369774adeb4")
+    getIndividualChats("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")
+    #getChatGroupMessages("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")
 
 
 main()
