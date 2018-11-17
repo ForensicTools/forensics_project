@@ -16,7 +16,6 @@ def initalizeProgram(path):
     pathlib.Path(mainPath + "\\Notes").mkdir(parents=True, exist_ok=True)
     pathlib.Path(mainPath + "\\Photo Data").mkdir(parents=True, exist_ok=True)
     pathlib.Path(mainPath + "\\DBFiles").mkdir(parents=True, exist_ok=True)
-    pathlib.Path(mainPath + "\\Wi-Fi").mkdir(parents=True, exist_ok=True)
 
 
 def copyFiles(path):
@@ -35,15 +34,11 @@ def copyFiles(path):
         copyfile(filePath, destination + extension)
 
 
-def plistDecode(path):
 
-
-
-
-
-def folderSetup(path):
+def initProgram(path):
     initalizeProgram(path)
     copyFiles(path)
 
 
-folderSetup("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")
+if __name__ == '__initProgram__':
+    main("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")

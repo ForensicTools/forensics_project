@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b52bf1b-d449-45f9-a196-3548386a025c" name="Default" comment="modified the initialization of the program removed a lot of hardcoded paths, made it much more simple and modified messagesExport to work with the already constructed folders for the data.">
-      <change afterPath="$PROJECT_DIR$/calenderExport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/callsExport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contactExport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notesExport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photoDataExport.py" afterDir="false" />
+    <list default="true" id="1b52bf1b-d449-45f9-a196-3548386a025c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/BackupTool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calenderExport.py" beforeDir="false" afterPath="$PROJECT_DIR$/calenderExport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/callsExport.py" beforeDir="false" afterPath="$PROJECT_DIR$/callsExport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contactExport.py" beforeDir="false" afterPath="$PROJECT_DIR$/contactExport.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/initalizeProgram.py" beforeDir="false" afterPath="$PROJECT_DIR$/initalizeProgram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messagesExport.py" beforeDir="false" afterPath="$PROJECT_DIR$/messagesExport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notesExport.py" beforeDir="false" afterPath="$PROJECT_DIR$/notesExport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photoDataExport.py" beforeDir="false" afterPath="$PROJECT_DIR$/photoDataExport.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webHistoryExport.py" beforeDir="false" afterPath="$PROJECT_DIR$/webHistoryExport.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +25,8 @@
       <file leaf-file-name="messagesExport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/messagesExport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+            <state relative-caret-position="3774">
+              <caret line="222" column="26" selection-start-line="222" selection-start-column="26" selection-end-line="222" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -35,8 +37,8 @@
       <file leaf-file-name="webHistoryExport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webHistoryExport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="90" />
+            <state relative-caret-position="646">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -47,8 +49,8 @@
       <file leaf-file-name="photoDataExport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/photoDataExport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="61" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="61" />
+            <state relative-caret-position="306">
+              <caret line="33" column="125" selection-start-line="33" selection-start-column="125" selection-end-line="33" selection-end-column="125" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -59,10 +61,22 @@
       <file leaf-file-name="notesExport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notesExport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="30" column="11" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="34" />
+            <state>
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initalizeProgram.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/initalizeProgram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +85,8 @@
       <file leaf-file-name="contactExport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contactExport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="629">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -83,8 +97,8 @@
       <file leaf-file-name="callsExport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/callsExport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="64" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="64" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="16" selection-end-column="50" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -95,8 +109,8 @@
       <file leaf-file-name="calenderExport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calenderExport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="24" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -104,24 +118,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initalizeProgram.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/initalizeProgram.py">
+      <file leaf-file-name="BackupTool.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BackupTool.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="422">
+              <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <marker date="1542421052201" expanded="true" signature="1763:1769" ph="..." />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contactsExport.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contactsExport.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -170,15 +174,16 @@
         <option value="$PROJECT_DIR$/wifiDataExport.py" />
         <option value="$PROJECT_DIR$/openCSV.py" />
         <option value="$PROJECT_DIR$/contactsExport.py" />
-        <option value="$PROJECT_DIR$/messagesExport.py" />
-        <option value="$PROJECT_DIR$/webHistoryExport.py" />
         <option value="$PROJECT_DIR$/photoData.py" />
+        <option value="$PROJECT_DIR$/callsExport.py" />
+        <option value="$PROJECT_DIR$/contactExport.py" />
+        <option value="$PROJECT_DIR$/webHistoryExport.py" />
+        <option value="$PROJECT_DIR$/messagesExport.py" />
+        <option value="$PROJECT_DIR$/initalizeProgram.py" />
+        <option value="$PROJECT_DIR$/calenderExport.py" />
+        <option value="$PROJECT_DIR$/BackupTool.py" />
         <option value="$PROJECT_DIR$/photoDataExport.py" />
         <option value="$PROJECT_DIR$/notesExport.py" />
-        <option value="$PROJECT_DIR$/contactExport.py" />
-        <option value="$PROJECT_DIR$/callsExport.py" />
-        <option value="$PROJECT_DIR$/calenderExport.py" />
-        <option value="$PROJECT_DIR$/initalizeProgram.py" />
       </list>
     </option>
   </component>
@@ -229,7 +234,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.calenderExport">
+  <component name="RunManager" selected="Python.BackupTool">
+    <configuration name="BackupTool" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="iBackupTool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BackupTool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="calenderExport" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="iBackupTool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -261,24 +284,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/callsExport.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="contactExport" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="iBackupTool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/contactExport.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -321,19 +326,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.photoDataExport" />
-      <item itemvalue="Python.notesExport" />
-      <item itemvalue="Python.contactExport" />
       <item itemvalue="Python.callsExport" />
       <item itemvalue="Python.calenderExport" />
+      <item itemvalue="Python.BackupTool" />
+      <item itemvalue="Python.photoDataExport" />
+      <item itemvalue="Python.notesExport" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.calenderExport" />
-        <item itemvalue="Python.callsExport" />
-        <item itemvalue="Python.contactExport" />
+        <item itemvalue="Python.BackupTool" />
         <item itemvalue="Python.notesExport" />
+        <item itemvalue="Python.calenderExport" />
         <item itemvalue="Python.photoDataExport" />
+        <item itemvalue="Python.callsExport" />
       </list>
     </recent_temporary>
   </component>
@@ -362,18 +367,26 @@
       <option name="project" value="LOCAL" />
       <updated>1542402392188</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modified the initialization of the program removed a lot of hardcoded paths, made it much more simple and modified messagesExport to work with the already constructed folders for the data.&#10;Added files with the functionality to get data for notes,calls, webHistory, photo, contacts, calender.">
+      <created>1542421104910</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542421104910</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21145834" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21145834" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39213604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39213604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -412,7 +425,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some comments" />
     <MESSAGE value="modified the initialization of the program removed a lot of hardcoded paths, made it much more simple and modified messagesExport to work with the already constructed folders for the data." />
-    <option name="LAST_COMMIT_MESSAGE" value="modified the initialization of the program removed a lot of hardcoded paths, made it much more simple and modified messagesExport to work with the already constructed folders for the data." />
+    <MESSAGE value="modified the initialization of the program removed a lot of hardcoded paths, made it much more simple and modified messagesExport to work with the already constructed folders for the data.&#10;Added files with the functionality to get data for notes,calls, webHistory, photo, contacts, calender." />
+    <option name="LAST_COMMIT_MESSAGE" value="modified the initialization of the program removed a lot of hardcoded paths, made it much more simple and modified messagesExport to work with the already constructed folders for the data.&#10;Added files with the functionality to get data for notes,calls, webHistory, photo, contacts, calender." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -476,7 +490,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gpsData.py" />
     <entry file="file://$PROJECT_DIR$/databaseFunctions.py" />
     <entry file="file://$PROJECT_DIR$/openCSV.py" />
     <entry file="file://$PROJECT_DIR$/messagesExport.py">
@@ -623,46 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/messagesExport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webHistoryExport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photoDataExport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="61" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notesExport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="30" column="11" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wifiDataExport.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -670,30 +643,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/callsExport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="64" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contactExport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/calenderExport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/callsExport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="16" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/messagesExport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3774">
+          <caret line="222" column="26" selection-start-line="222" selection-start-column="26" selection-end-line="222" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -702,11 +675,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/initalizeProgram.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="289">
+          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1542421052201" expanded="true" signature="1763:1769" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notesExport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photoDataExport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="125" selection-start-line="33" selection-start-column="125" selection-end-line="33" selection-end-column="125" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webHistoryExport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contactExport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackupTool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

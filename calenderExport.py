@@ -32,7 +32,6 @@ def getCalenderItemData(pathToBackup):
 
     for row in rows:
         if row[2] is not None and row[4] is not None:
-
             startTime = convertCocoa(row[2])
             endTime = convertCocoa(row[4])
             string = str(row[0]) + " | " + str(row[1]) + " | " + str(startTime) + " | " + str(row[3]) + " | " + str(
@@ -42,8 +41,9 @@ def getCalenderItemData(pathToBackup):
 
 
 
-def main():
-    getCalenderItemData("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")
+def Calender(path):
+    getCalenderItemData(path)
 
 
-main()
+if __name__ == '__Calender__':
+    main("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")

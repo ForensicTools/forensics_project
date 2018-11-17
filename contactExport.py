@@ -37,8 +37,9 @@ def getContactData(pathToBackup):
 
 
 
-def main():
-    getContactData("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")
+def Contacts(path):
+    getContactData(path)
 
 
-main()
+if __name__ == '__Contacts__':
+    main("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")

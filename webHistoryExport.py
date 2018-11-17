@@ -32,8 +32,9 @@ def getWebHistory(pathToBackup):
         file.write(string.encode(encoding='UTF-8'))
 
 
-def main():
-    getWebHistory("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")
+def WebHistory(path):
+    getWebHistory(path)
 
 
-main()
+if __name__ == '__WebHistory__':
+    main("D:\cc9e2052aae826987a63f0cd60e81369774adeb4")
