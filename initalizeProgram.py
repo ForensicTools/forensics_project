@@ -16,6 +16,7 @@ def initalizeProgram(path):
     pathlib.Path(mainPath + "\\Notes").mkdir(parents=True, exist_ok=True)
     pathlib.Path(mainPath + "\\Photo Data").mkdir(parents=True, exist_ok=True)
     pathlib.Path(mainPath + "\\DBFiles").mkdir(parents=True, exist_ok=True)
+    pathlib.Path(mainPath + "\\Wi-Fi").mkdir(parents=True, exist_ok=True)
 
 
 def copyFiles(path):
@@ -23,7 +24,7 @@ def copyFiles(path):
     files = ["3d0d7e5fb2ce288813306e4d4636395e047a3d28", "12b144c0bd44f2b3dffd9186d3f9c05b917cee25",
              "2041457d5fe04d39d0ab481178355df6781e6858", "e74113c185fd8297e140cfcf9c99436c5cc06b57",
              "31bb7ba8914766d4ba40d6dfb6113c8b614be442", "ca3bc056d4da0bbf88b5fb3be254f3b7147e639c",
-             "5a4935c78a5255723f707230a451d79c540d2741"]
+             "5a4935c78a5255723f707230a451d79c540d2741", "4f98687d8ab0d6d1a371110e6b7300f6e465bef2"]
 
 
     extension = ".db"
@@ -32,6 +33,11 @@ def copyFiles(path):
         filePath = path + "\\" + file[0:2] + "\\" + file
         destination = os.path.dirname(path) + "iBackupData\\DBFiles\\" + file
         copyfile(filePath, destination + extension)
+
+
+def plistDecode(path):
+
+
 
 
 
