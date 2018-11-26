@@ -8,4 +8,4 @@ To run this tool simply download the zip file and run the BackupTool.py file and
 path to the iPhone backup. The program will create a folder in the same directory as the folder
 above the iPhone backup called iBackupData which stores all the data from the extraction process.
 
-Peter Carenzo and Bill Krodthoff 
+
