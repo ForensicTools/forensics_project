@@ -20,7 +20,7 @@ def convertCocoa(value):
     return timestamp.strftime('%Y-%m-%d %H:%M:%S')
 
 def databaseConnection(pathToBackup):
-    filepath = os.path.dirname(pathToBackup) + "iBackupData\\DBFiles\\3d0d7e5fb2ce288813306e4d4636395e047a3d28.db"
+    filepath = os.path.dirname(pathToBackup) + "\\iBackupData\\DBFiles\\3d0d7e5fb2ce288813306e4d4636395e047a3d28.db"
     conn = sqlite3.connect(filepath)
     c = conn.cursor()
     return c
@@ -65,7 +65,7 @@ def getChatGroupMessages(pathToBackup):
     GCIds = getGroupChatIDs(pathToBackup)
     createDirectories(pathToBackup, GCIds)
     for i in range(len(GCIds)):
-        filename = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Texts\\" + str(GCIds[i]) + ".txt"
+        filename = os.path.dirname(pathToBackup) + "\\iBackupData\\SMS\\Texts\\" + str(GCIds[i]) + ".txt"
         c = databaseConnection(pathToBackup)
         rows = c.execute("SELECT handle_id, ROWID, text, service, date, is_from_me, cache_has_attachments FROM message WHERE cache_roomnames=" + "\"" + str(GCIds[i]) + "\"")
         file = open(filename, "w+")
@@ -115,7 +115,7 @@ def getChatGroupMessages(pathToBackup):
 
 
                         source = pathToBackup + "\\" + prefix + "\\" + hash
-                        destination = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Attachments\\" + str(GCIds[i]) + "\\" + hash
+                        destination = os.path.dirname(pathToBackup) + "\\iBackupData\\SMS\\Attachments\\" + str(GCIds[i]) + "\\" + hash
                         myFile = Path(source)
                         if myFile.is_file():
                             copyfile(source, destination + extension)
@@ -142,7 +142,7 @@ def getIndividualChats(pathToBackup):
     ids = getHandleIds(pathToBackup)
     createDirectories(pathToBackup, ids)
     for i in range(len(ids)):
-        filename = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Texts\\" + str(ids[i]) + ".txt"
+        filename = os.path.dirname(pathToBackup) + "\\iBackupData\\SMS\\Texts\\" + str(ids[i]) + ".txt"
         c = databaseConnection(pathToBackup)
         rows = c.execute("SELECT handle_id, ROWID, text, service, date, is_from_me, cache_has_attachments FROM message WHERE cache_roomnames IS NULL AND handle_id=" + str(ids[i]))
         file = open(filename, "w+")
@@ -192,7 +192,7 @@ def getIndividualChats(pathToBackup):
 
 
                             source = pathToBackup + "\\" + prefix + "\\" + hash
-                            destination = os.path.dirname(pathToBackup) + "iBackupData\\SMS\\Attachments\\" + str(row[0]) + "\\" + hash
+                            destination = os.path.dirname(pathToBackup) + "\\iBackupData\\SMS\\Attachments\\" + str(row[0]) + "\\" + hash
                             myFile = Path(source)
                             if myFile.is_file():
                                 copyfile(source, destination + extension)

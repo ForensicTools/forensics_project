@@ -30,7 +30,7 @@ def copyFiles(path):
 
     for file in files:
         filePath = path + "\\" + file[0:2] + "\\" + file
-        destination = os.path.dirname(path) + "iBackupData\\DBFiles\\" + file
+        destination = os.path.dirname(path) + "\\iBackupData\\DBFiles\\" + file
         copyfile(filePath, destination + extension)
 
 

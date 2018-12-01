@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def databaseConnection(pathToBackup):
-    filepath = os.path.dirname(pathToBackup) + "iBackupData\\DBFiles\\e74113c185fd8297e140cfcf9c99436c5cc06b57.db"
+    filepath = os.path.dirname(pathToBackup) + "\\iBackupData\\DBFiles\\e74113c185fd8297e140cfcf9c99436c5cc06b57.db"
     conn = sqlite3.connect(filepath)
     c = conn.cursor()
     return c
@@ -17,7 +17,7 @@ def convertCocoa(value):
 
 
 def getWebHistory(pathToBackup):
-    filename = os.path.dirname(pathToBackup) + "iBackupData\\Web History\\web_history.txt"
+    filename = os.path.dirname(pathToBackup) + "\\iBackupData\\Web History\\web_history.txt"
     file = open(filename, "wb")
 
     c = databaseConnection(pathToBackup)

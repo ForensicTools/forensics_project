@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def databaseConnection(pathToBackup):
-    filepath = os.path.dirname(pathToBackup) + "iBackupData\\DBFiles\\5a4935c78a5255723f707230a451d79c540d2741.db"
+    filepath = os.path.dirname(pathToBackup) + "\\iBackupData\\DBFiles\\5a4935c78a5255723f707230a451d79c540d2741.db"
     conn = sqlite3.connect(filepath)
     c = conn.cursor()
     return c
@@ -18,7 +18,7 @@ def convertCocoa(value):
 
 
 def getCallRecords(pathToBackup):
-    filename = os.path.dirname(pathToBackup) + "iBackupData\\Calls\\call_records.txt"
+    filename = os.path.dirname(pathToBackup) + "\\iBackupData\\Calls\\call_records.txt"
     file = open(filename, "wb")
     c = databaseConnection(pathToBackup)
     rows = c.execute("SELECT Z_PK, ZDATE, ZDURATION, ZISO_COUNTRY_CODE, ZLOCATION, ZSERVICE_PROVIDER, ZADDRESS FROM ZCALLRECORD")

@@ -4,7 +4,7 @@ import os
 
 
 def databaseConnection(pathToBackup):
-    filepath = os.path.dirname(pathToBackup) + "iBackupData\\DBFiles\\12b144c0bd44f2b3dffd9186d3f9c05b917cee25.db"
+    filepath = os.path.dirname(pathToBackup) + "\\iBackupData\\DBFiles\\12b144c0bd44f2b3dffd9186d3f9c05b917cee25.db"
     conn = sqlite3.connect(filepath)
     c = conn.cursor()
     return c
@@ -25,7 +25,7 @@ def convertCocoa(value):
 
 def getPhotoData(pathToBackup):
 
-    filename = os.path.dirname(pathToBackup) + "iBackupData\\Photo Data\\photo_data.txt"
+    filename = os.path.dirname(pathToBackup) + "\\iBackupData\\Photo Data\\photo_data.txt"
     file = open(filename, "wb")
     c = databaseConnection(pathToBackup)
     rows = c.execute("SELECT ZDATECREATED, ZDURATION, ZLONGITUDE, ZLATITUDE, ZDIRECTORY, ZFILENAME FROM ZGENERICASSET")

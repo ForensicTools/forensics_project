@@ -4,7 +4,7 @@ import os
 import platform
 
 def databaseConnection(pathToBackup):
-    filepath = os.path.dirname(pathToBackup) + "iBackupData\\DBFiles\\2041457d5fe04d39d0ab481178355df6781e6858.db"
+    filepath = os.path.dirname(pathToBackup) + "\\iBackupData\\DBFiles\\2041457d5fe04d39d0ab481178355df6781e6858.db"
     conn = sqlite3.connect(filepath)
     c = conn.cursor()
     return c
@@ -25,7 +25,7 @@ def convertCocoa(value):
 
 
 def getCalenderItemData(pathToBackup):
-    filename = os.path.dirname(pathToBackup) + "iBackupData\\Calender\\calender_records.txt"
+    filename = os.path.dirname(pathToBackup) + "\\iBackupData\\Calender\\calender_records.txt"
     file = open(filename, "wb")
     c = databaseConnection(pathToBackup)
     rows = c.execute("SELECT ROWID, summary, start_date, start_tz, end_date, all_day, calendar_id FROM CalendarItem")
