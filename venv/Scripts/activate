@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Peter\PycharmProjects\iBackupTool\venv"
+VIRTUAL_ENV="C:\Users\trueb\Documents\GitHub\forensics_project\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
